@@ -1,4 +1,4 @@
-const CACHE = 'profipoz-test-v148';
+const CACHE = 'testy apki pp-v148';
 const FILES = ['./'];
 
 self.addEventListener('install', e => {
