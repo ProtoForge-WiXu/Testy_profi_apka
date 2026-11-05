@@ -636,7 +636,7 @@ html,body{height:100%;overflow:hidden;font-family:'Barlow',sans-serif;background
         </div>
         <div class="field">
           <label>Nazwa pliku Excel</label>
-          <input type="text" id="excelFileName" placeholder="protokoly.xlsx" value="protokoly_profipoz.xlsx">
+          <input type="text" id="excelFileName" placeholder="protokoly.xlsx" value="testy_profi_apka.xlsx">
         </div>
         <div style="display:flex;gap:10px;margin-top:4px;">
           <button class="btn btn-red" style="margin:0;flex:1" onclick="saveServerConfig()">💾 Zapisz</button>
@@ -1030,7 +1030,7 @@ Content-Type: application/json
 const SK = 'profipoz_v1';
 // WERSJA TESTOWA: wstaw adres wdrożenia testowego GAS (aplikacja internetowa, kończy się na /exec).
 // Można też wpisać go w zakładce Serwer. Adres produkcyjny celowo usunięty, żeby test nie pisał do produkcji.
-const DEFAULT_SERVER_URL = '';
+const DEFAULT_SERVER_URL = 'https://script.google.com/macros/s/AKfycbzum83_lN18CYgNhRWNxzM_hDj1mH_Jwhd2TyDYFnEtOHT6yrdJDMDwNlsp_RHIIUqQmQ/exec';
 
 // Stare URLe które trzeba zastąpić nowym
 const OBSOLETE_URLS = [
