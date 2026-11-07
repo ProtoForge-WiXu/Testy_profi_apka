@@ -1028,8 +1028,7 @@ Content-Type: application/json
 <script>
 // ===================== DATA =====================
 const SK = 'profipoz_v1';
-// WERSJA TESTOWA: wstaw adres wdrożenia testowego GAS (aplikacja internetowa, kończy się na /exec).
-// Można też wpisać go w zakładce Serwer. Adres produkcyjny celowo usunięty, żeby test nie pisał do produkcji.
+// WERSJA TESTOWA: adres wdrożenia testowego GAS. Adres produkcyjny celowo nie występuje w tym pliku.
 const DEFAULT_SERVER_URL = 'https://script.google.com/macros/s/AKfycbzum83_lN18CYgNhRWNxzM_hDj1mH_Jwhd2TyDYFnEtOHT6yrdJDMDwNlsp_RHIIUqQmQ/exec';
 
 // Stare URLe które trzeba zastąpić nowym
@@ -2816,7 +2815,7 @@ function exportAllToExcel() {
     ws['!cols'] = [{wch:24},{wch:34},{wch:34},{wch:14}];
     XLSX.utils.book_append_sheet(wb, ws, `${p.typ}_${i+1}`.substring(0,31));
   });
-  const fn = localStorage.getItem('excelFileName') || 'protokoly_profipoz.xlsx';
+  const fn = localStorage.getItem('excelFileName') || 'testy_profi_apka.xlsx';
   XLSX.writeFile(wb, fn);
   toast(`📊 Eksport ${protokoly.length} protokołów + harmonogram + godziny!`);
 }
@@ -2825,7 +2824,7 @@ function exportAllToExcel() {
 function loadServerConfig() {
   document.getElementById('serverUrl').value = localStorage.getItem('serverUrl')||'';
   document.getElementById('apiKey').value = localStorage.getItem('apiKey')||'';
-  document.getElementById('excelFileName').value = localStorage.getItem('excelFileName')||'protokoly_profipoz.xlsx';
+  document.getElementById('excelFileName').value = localStorage.getItem('excelFileName')||'testy_profi_apka.xlsx';
 }
 
 function saveServerConfig() {
